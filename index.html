@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="GridAR: Glimpse-and-Grow Test-Time Scaling for Autoregressive Image Generation">
+  <meta property="og:title" content="GridAR: Glimpse-and-Grow Test-Time Scaling for Autoregressive Image Generation"/>
+  <meta property="og:description" content="GridAR: Glimpse-and-Grow Test-Time Scaling for Autoregressive Image Generation"/>
+  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="GridAR: Glimpse-and-Grow Test-Time Scaling for Autoregressive Image Generation">
+  <meta name="twitter:description" content="GridAR: Glimpse-and-Grow Test-Time Scaling for Autoregressive Image Generation">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>
+    GridAR: Glimpse-and-Grow Test-Time Scaling for Autoregressive Image Generation
+  </title>
+  <!-- <link rel="icon" type="image/x-icon" href="static/images/favicon.ico"> -->
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">
+              GridAR: Glimpse-and-Grow Test-Time Scaling for Autoregressive Image Generation
+            </h1>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+        <!-- Teaser video-->
+        <section class="hero teaser">
+          <div class="container is-max-desktop">
+            <div class="hero-body">
+              <img 
+                src="static/images/GridAR_intro.png"
+              />
+              <div class="content has-text-justified">
+                <strong>GridAR</strong> is a grid-structured test-time scaling framework for autoregressive image generation. By directing computation toward the most promising continuations, GridAR effectively expands the search space to elicit the best achievable outputs from visual AR models. With 4 candidates, GridAR outperforms Best-of-<em>N</em> <em>(N=8)</em>, achieving +14.4% quality and -18.2% cost. Even when paired with an open-source verifier (MiniCPM-V 4.5, 8.7B), it delivers +14.1% gains at -18.1% lower cost.
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- End teaser video -->
+
+  <!-- Qualitative Samples (moved above Abstract) -->
+  <section class="hero is-small" style="margin-top:-80px; margin-bottom:0px;">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <!-- T2I qualitative carousel -->
+        <div id="results-carousel-t2i" class="carousel results-carousel">
+          <div class="item"><img src="static/images/t2i-qual1.png" alt="T2I sample 1"/></div>
+          <div class="item"><img src="static/images/t2i-qual2.png" alt="T2I sample 2"/></div>
+          <div class="item"><img src="static/images/t2i-qual3.png" alt="T2I sample 3"/></div>
+          <div class="item"><img src="static/images/t2i-qual4.png" alt="T2I sample 4"/></div>
+          <div class="item"><img src="static/images/t2i-qual5.png" alt="T2I sample 5"/></div>
+        </div>
+        <div class="content has-text-justified" style="margin-top: 0.3rem;">
+          <p><strong>Qualitative (Text-to-Image).</strong> We compare single generation, Best-of-<em>N (N=4)</em>, and GridAR <em>(N=4)</em>. GridAR yields cleaner object counts, tighter attribute binding, and more faithful spatial layouts.</p>
+        </div>
+
+        <!-- Editing qualitative carousel -->
+        <div id="results-carousel-edit" class="carousel results-carousel" style="margin-top: -3.0rem;">
+          <div class="item"><img src="static/images/edit-qual1.png" alt="Edit sample 1"/></div>
+          <div class="item"><img src="static/images/edit-qual2.png" alt="Edit sample 2"/></div>
+          <div class="item"><img src="static/images/edit-qual3.png" alt="Edit sample 3"/></div>
+        </div>
+        <div class="content has-text-justified" style="margin-top: 0.3rem;">
+          <p><strong>Qualitative (Image Editing).</strong> GridAR realizes the edit instruction while preserving background structure, reducing artifacts and keeping scene layout.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+        <!-- Paper abstract -->
+        <section class="section hero is-light">
+          <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+              <div class="column is-four-fifths">
+                <h2 class="title is-3">Abstract</h2>
+                <div class="content has-text-justified">
+                  <p>
+                    Recent visual autoregressive (AR) models have shown promising capabilities in text-to-image generation, operating in a manner similar to large language models. While test-time computation scaling has brought remarkable success in enabling reasoning-enhanced outputs for challenging natural language tasks, its adaptation to visual AR models remains unexplored and poses unique challenges. Naively applying test-time scaling strategies such as Best-of-N can be suboptimal: they consume full-length computation on erroneous generation trajectories, while the raster-scan decoding scheme lacks a blueprint of the entire canvas, limiting scaling benefits as only a few prompt-aligned candidates are generated. To address these, we introduce <strong>GridAR, a test-time scaling framework designed to elicit the best possible results from visual AR models</strong>. GridAR employs a grid-partitioned progressive generation scheme in which multiple partial candidates for the same position are generated within a canvas, infeasible ones are pruned early, and viable ones are fixed as anchors to guide subsequent decoding. Coupled with this, we present a layout-specified prompt reformulation strategy that inspects partial views to infer a feasible layout for satisfying the prompt. The reformulated prompt then guides subsequent image generation to mitigate the blueprint deficiency. Together, GridAR achieves higher-quality results under limited test-time scaling: with <em>N=4</em>, it even outperforms Best-of-<em>N</em> <em>(N=8)</em> by 14.4% on T2I-CompBench++ while reducing cost by 18.2%. It also generalizes to autoregressive image editing, showing comparable edit quality and a 13.9% gain in semantic preservation on PIE-Bench over larger-<em>N</em> baselines.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- End paper abstract -->
+
+
+        <section class="section hero">
+          <div class="container is-max-desktop">
+            <div class="columns is-centered">
+              <div class="column is-full">
+                <h2 class="title is-3">Method</h2>
+                <img
+                  src="static/images/verification.png"
+                  alt="MY ALT TEXT"
+                />
+                <div class="content has-text-justified">
+                  <p>
+                    <strong>Grid-based progressive generation.</strong> GridAR partitions the canvas and explores multiple partial continuations in parallel. At the first stage, we create several quarter-image candidates from the same prompt and immediately prune those that violate the instruction. The remaining “anchors” are fixed and propagated to the next stage, where the lower halves are completed. By allocating compute to promising branches and stopping doomed ones early, GridAR expands the effective search space without retraining.
+                  </p>
+                </div>
+                <img
+                  src="static/images/reformulation.png"
+                  alt="MY ALT TEXT"
+                  style="max-width:100%; height:auto; display:block; margin:0 auto;"
+                />
+                <div class="content has-text-justified">
+                  <p>
+                    <strong>Layout-specified prompt reformulation.</strong> Raster-scan AR decoding lacks a global blueprint, so later regions often over/under-count objects or misplace attributes. After verifying the partially generated canvas, we rewrite the prompt to encode an explicit, feasible layout implied by the anchors (e.g., counts, relative positions). This mid-generation reformulation steers subsequent decoding and mitigates the “blueprint deficiency,” yielding more instruction-aligned images under the same test-time budget.
+                  </p>
+
+                </div>
+                <img
+                  src="static/images/reject_samples.png"
+                  alt="MY ALT TEXT"
+                />
+                <div class="content has-text-justified">
+                  <p>
+                    <strong>Examples of rejected grids.</strong> Our verifier filters out candidates that are incompatible with the prompt, especially at later stages where inconsistencies become clearer. The figure shows typical rejects (object miscounts, attribute swaps, spatial violations).
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Image carousel -->
+        <section class="hero is-small">
+          <div class="hero-body">
+              <div class="container is-max-desktop">
+                <div class="columns is-centered">
+                  <div class="column is-full">
+                    <h2 class="title is-3">Experiment</h2>
+                  </div>
+                </div>
+              <div class="content has-text-justified">
+                <p>
+                We evaluate GridAR on two tasks with visual AR models: (1) <strong>Text-to-Image (T2I) Generation</strong>, and (2) <strong>Image Editing</strong>. For T2I generation, we report results on T2I-CompBench++ and GenEval. For editing, we use PIE-Bench with dual goals of instruction following and source preservation.
+                </p>
+              </div>
+              <img
+              src="static/images/result_1.png"
+              alt="MY ALT TEXT"
+              style="max-width:100%; height:auto; display:block; margin:0 auto;"
+              />
+              <div class="content has-text-justified">
+                <p>
+                  <strong>Text-to-image Generation (T2I-CompBench++).</strong> Under the same number of candidates, GridAR consistently surpasses Best-of-N by directing computation to viable continuations. Notably, with only <em>N=4</em>, GridAR can outperform Best-of-N at <em>N=8</em> while using less compute. Gains are most pronounced on compositional categories (counts, spatial relations, attribute binding), indicating better global consistency.
+                </p>
+              </div>
+              <img
+              src="static/images/result_2.png"
+              alt="MY ALT TEXT"
+              style="max-width:100%; height:auto; display:block; margin:0 auto;"
+              />
+              <div class="content has-text-justified">
+                <p>
+                  <strong>Image editing (PIE-Bench).</strong> When applied to an AR editor, GridAR achieves strong instruction following with markedly improved source preservation. Compared to larger-N baselines, it attains comparable or higher CLIP similarity on the edited region while reducing structure distortion (DINO-ViT distance) and pixel-level errors (e.g., MSE/LPIPS). This highlights GridAR’s compute-efficient edits without sacrificing fidelity.
+                </p>
+              </div>
+          </div>
+        </div>
+        </section>
+        <!-- End image carousel -->
+
+
+
+
+<!--BibTex citation -->
+
+<!--End BibTex citation -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
