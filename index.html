@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
   <!-- Replace the content tag with appropriate information -->
-  <meta name="description" content="GridAR: Glimpse-and-Grow Test-Time Scaling for Autoregressive Image Generation">
-  <meta property="og:title" content="GridAR: Glimpse-and-Grow Test-Time Scaling for Autoregressive Image Generation"/>
-  <meta property="og:description" content="GridAR: Glimpse-and-Grow Test-Time Scaling for Autoregressive Image Generation"/>
+  <meta name="description" content="Progress by Pieces: Test-Time Scaling for Autoregressive Image Generation">
+  <meta property="og:title" content="Progress by Pieces: Test-Time Scaling for Autoregressive Image Generation"/>
+  <meta property="og:description" content="Progress by Pieces: Test-Time Scaling for Autoregressive Image Generation"/>
   <meta property="og:url" content="URL OF THE WEBSITE"/>
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
   <meta property="og:image" content="static/image/your_banner_image.png" />
@@ -14,8 +14,8 @@
   <meta property="og:image:height" content="630"/>
 
 
-  <meta name="twitter:title" content="GridAR: Glimpse-and-Grow Test-Time Scaling for Autoregressive Image Generation">
-  <meta name="twitter:description" content="GridAR: Glimpse-and-Grow Test-Time Scaling for Autoregressive Image Generation">
+  <meta name="twitter:title" content="Progress by Pieces: Test-Time Scaling for Autoregressive Image Generation">
+  <meta name="twitter:description" content="Progress by Pieces: Test-Time Scaling for Autoregressive Image Generation">
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
   <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
   <meta name="twitter:card" content="summary_large_image">
@@ -25,7 +25,7 @@
 
 
   <title>
-    GridAR: Glimpse-and-Grow Test-Time Scaling for Autoregressive Image Generation
+    Progress by Pieces: Test-Time Scaling for Autoregressive Image Generation
   </title>
   <!-- <link rel="icon" type="image/x-icon" href="static/images/favicon.ico"> -->
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
@@ -55,13 +55,81 @@
         <div class="columns is-centered">
           <div class="column has-text-centered">
             <h1 class="title is-2 publication-title">
-              GridAR: Glimpse-and-Grow Test-Time Scaling for Autoregressive Image Generation
+              Progress by Pieces: Test-Time Scaling for Autoregressive Image Generation
             </h1>
-                </div>
-              </div>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <a href="https://joonhyung-park.github.io/" target="_blank">
+                  Joonhyung Park
+                </a>
+                <sup>*</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://www.linkedin.com/in/hyeongwon-jang-478591292" target="_blank">
+                  Hyeongwon Jang
+                </a>
+                <sup>*</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://www.linkedin.com/in/joowon-kim-8b7390262" target="_blank">
+                  Joowon Kim
+                </a>,
+              </span>
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=UWO1mloAAAAJ&hl=en" target="_blank">
+                  Eunho Yang
+                </a>
+                <sup>†</sup>,
+              </span>
+            </div>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">KAIST, AITRICS</span>
+              <span class="eql-cntrb"><small><br><sup>*</sup>Equal Contribution</small></span>
+            </div>
+            
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+                         <!-- Arxiv PDF link -->
+                      <span class="link-block">
+                        <a href="https://arxiv.org/pdf/2511.21185.pdf" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span>
+                        </a>
+                      </span>
+
+
+                      <!-- Github link -->
+                      <!-- <span class="link-block">
+                        <a href="" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fab fa-github"></i>
+                        </span>
+                        <span>Code</span>
+                        </a>
+                      </span> -->
+
+                      <!-- ArXiv abstract Link -->
+                      <span class="link-block">
+                        <a href="https://arxiv.org/abs/2511.21185" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="ai ai-arxiv"></i>
+                        </span>
+                        <span>arXiv</span>
+                        </a>
+                      </span>
+                    </div>
+                  </div>
             </div>
           </div>
-        </section>
+        </div>
+      </div>
+    </section>
 
 
         <!-- Teaser video-->
@@ -69,11 +137,12 @@
           <div class="container is-max-desktop">
             <div class="hero-body">
               <img 
-                src="static/images/GridAR_intro_revised.png"
+                src="static/images/GridAR_intro.png"
               />
               <div class="content has-text-justified">
-                <strong>GridAR</strong> is a grid-structured test-time scaling framework for autoregressive image generation. By directing computation toward the most promising continuations, GridAR effectively expands the search space to elicit the best achievable outputs from visual AR models. With 4 candidates, GridAR outperforms Best-of-<em>N</em> <em>(N=8)</em>, achieving +14.4% quality and -18.2% cost. Even when paired with an open-source verifier (MiniCPM-V 4.5, 8.7B), it delivers +11.7% gains at -17.7% lower cost.
+                <strong>GridAR</strong> is a grid-structured test-time scaling framework for autoregressive image generation. By directing computation toward the most promising continuations, GridAR effectively expands the search space to elicit the best achievable outputs from visual AR models. With 4 candidates, GridAR outperforms Best-of-<em>N</em> <em>(N=8)</em>, achieving +14.4% quality and -25.6% cost. Even when paired with an open-source verifier (MiniCPM-V 4.5, 8.7B), it delivers +11.7% gains at -27.6% lower cost.
               </div>
+              
             </div>
           </div>
         </section>
@@ -117,7 +186,7 @@
                 <h2 class="title is-3">Abstract</h2>
                 <div class="content has-text-justified">
                   <p>
-                    Recent visual autoregressive (AR) models have shown promising capabilities in text-to-image generation, operating in a manner similar to large language models. While test-time computation scaling has brought remarkable success in enabling reasoning-enhanced outputs for challenging natural language tasks, its adaptation to visual AR models remains unexplored and poses unique challenges. Naively applying test-time scaling strategies such as Best-of-N can be suboptimal: they consume full-length computation on erroneous generation trajectories, while the raster-scan decoding scheme lacks a blueprint of the entire canvas, limiting scaling benefits as only a few prompt-aligned candidates are generated. To address these, we introduce <strong>GridAR, a test-time scaling framework designed to elicit the best possible results from visual AR models</strong>. GridAR employs a grid-partitioned progressive generation scheme in which multiple partial candidates for the same position are generated within a canvas, infeasible ones are pruned early, and viable ones are fixed as anchors to guide subsequent decoding. Coupled with this, we present a layout-specified prompt reformulation strategy that inspects partial views to infer a feasible layout for satisfying the prompt. The reformulated prompt then guides subsequent image generation to mitigate the blueprint deficiency. Together, GridAR achieves higher-quality results under limited test-time scaling: with <em>N=4</em>, it even outperforms Best-of-<em>N</em> <em>(N=8)</em> by 14.4% on T2I-CompBench++ while reducing cost by 18.2%. It also generalizes to autoregressive image editing, showing comparable edit quality and a 13.9% gain in semantic preservation on PIE-Bench over larger-<em>N</em> baselines.
+                    Recent visual autoregressive (AR) models have shown promising capabilities in text-to-image generation, operating in a manner similar to large language models. While test-time computation scaling has brought remarkable success in enabling reasoning-enhanced outputs for challenging natural language tasks, its adaptation to visual AR models remains unexplored and poses unique challenges. Naively applying test-time scaling strategies such as Best-of-N can be suboptimal: they consume full-length computation on erroneous generation trajectories, while the raster-scan decoding scheme lacks a blueprint of the entire canvas, limiting scaling benefits as only a few prompt-aligned candidates are generated. To address these, we introduce <strong>GridAR, a test-time scaling framework designed to elicit the best possible results from visual AR models</strong>. GridAR employs a grid-partitioned progressive generation scheme in which multiple partial candidates for the same position are generated within a canvas, infeasible ones are pruned early, and viable ones are fixed as anchors to guide subsequent decoding. Coupled with this, we present a layout-specified prompt reformulation strategy that inspects partial views to infer a feasible layout for satisfying the prompt. The reformulated prompt then guides subsequent image generation to mitigate the blueprint deficiency. Together, GridAR achieves higher-quality results under limited test-time scaling: with <em>N=4</em>, it even outperforms Best-of-<em>N</em> <em>(N=8)</em> by 14.4% on T2I-CompBench++ while reducing cost by 25.6%. It also generalizes to autoregressive image editing, showing comparable edit quality and a 13.9% gain in semantic preservation on PIE-Bench over larger-<em>N</em> baselines.
                   </p>
                 </div>
               </div>
