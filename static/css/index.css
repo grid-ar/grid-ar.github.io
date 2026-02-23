@@ -134,4 +134,9 @@ body {
 }
 
 
+.publication-authors sup {
+  font-size: 0.55em;
+  line-height: 0;
+  vertical-align: super;
+}
 
